@@ -25,7 +25,8 @@ class Code2NaturalLanguage(object):
     # --------------------------------------------------------------------------
     # Initialization
     # --------------------------------------------------------------------------
-
+    
+    # This is our constructor
     def __init__(self, args, src_dict, tgt_dict, state_dict=None):
         # Book-keeping.
         self.args = args
@@ -36,6 +37,7 @@ class Code2NaturalLanguage(object):
         self.updates = 0
         self.use_cuda = False
         self.parallel = False
+
 
         if args.model_type == 'rnn':
             self.network = Seq2seq(self.args, tgt_dict)
